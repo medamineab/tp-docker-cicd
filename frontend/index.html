@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Frontend - TP Docker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>TP Docker Avancé</h1>
+    <h2>Frontend Statique</h2>
+    <h3>API response</h3>
+    <pre id="api-response">Loading API data...</pre>
+    <h3>DB response</h3>
+    <pre id="db-response">Loading DB data...</pre>
+  </div>
+
+<script>
+async function fetchData() {
+  try {
+    // IMPORTANT: use localhost when called from browser
+    const apiRes = await fetch('http://localhost:3000/api');
+    const apiData = await apiRes.json();
+    document.getElementById('api-response').innerText = JSON.stringify(apiData, null, 2);
+
+    const dbRes = await fetch('http://localhost:3000/db');
+    const dbData = await dbRes.json();
+    document.getElementById('db-response').innerText = JSON.stringify(dbData, null, 2);
+  } catch (err) {
+    document.getElementById('api-response').innerText = 'Error: ' + err.message;
+    document.getElementById('db-response').innerText = 'Error: ' + err.message;
+    console.error(err);
+  }
+}
+
+setTimeout(fetchData, 1000);
+</script>
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+body{
+font-family:Arial,sans-serif;
+background:#f4f4f9;
+margin:0;
+padding:20px
+}
+.container{
+max-width:800px;
+margin:30px auto;
+background:#fff;
+padding:20px;
+border-radius:8px;
+box-shadow:0 2px 10px rgba(0,0,0,0.08)
+}
+pre{
+background:#f8f9fa;
+padding:10px;
+border-radius:4px;
+white-space:pre-wrap;
+font-family:monospace
+}
+h1,h2{
+color:#007bff
+}
+#api-response , #db-response {
+background-color : # f8f9fa ;
+padding : 10 px ;
+border-radius : 4 px ;
+margin-top : 10 px ;
+white-space : pre - wrap ;
+font-family : monospace ;
+}
+
