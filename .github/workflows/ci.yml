@@ -1,4 +1,4 @@
-name: CI - Test de vase   # Nom du workflow
+name: CI - Test de base   # Nom du workflow
 
 on:                               # Déclencheurs
   push:
