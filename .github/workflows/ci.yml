@@ -6,7 +6,7 @@ on:                               # Déclencheurs
   pull_request :
     branches : [main]
 jobs:                             # Ensemble des jobs (tâches)
-  build:
+  hello:
     runs-on: ubuntu-latest        # S'exécute sur un runner Ubuntu
 
     steps:                        # Liste des étapes à exécuter
